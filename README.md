@@ -7,14 +7,14 @@
 
 ### 初始状态：
 
-![初始状态-w140](http://ohsy85rr9.bkt.clouddn.com/uploadimagerecyclerview-MainActivity-03092017143505.png)
+![](http://ohsy85rr9.bkt.clouddn.com/uploadimagerecyclerview-MainActivity-03092017143505.png?imageView2/2/w/200)
 
 ### 上传成功状态：
 
-![上传成功状态-w140](http://ohsy85rr9.bkt.clouddn.com/uploadimagerecyclerview-MainActivity-03092017143531.png)
+![](http://ohsy85rr9.bkt.clouddn.com/uploadimagerecyclerview-MainActivity-03092017143531.png?imageView2/2/w/200)
 
 ### 上传失败状态
 
-![上传失败状态-w140](http://ohsy85rr9.bkt.clouddn.com/uploadimagerecyclerview-MainActivity-03092017150155.png)
+![](http://ohsy85rr9.bkt.clouddn.com/uploadimagerecyclerview-MainActivity-03092017150155.png?imageView2/2/w/200)
 
 
