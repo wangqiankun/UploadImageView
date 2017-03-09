@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#FFF">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+
+    <com.alittletext.uploadimage.UploadImageDrawableCenterTextView
+        android:id="@+id/tv_retry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/upload_image_retry"
+        android:gravity="center_horizontal"
+        android:text="@string/upload_image_retry"
+        android:textColor="#FFF"
+        android:textSize="13sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/ib_del"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:scaleType="center"
+        android:src="@drawable/upload_image_del"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/iv_add_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/upload_image_shape"
+        android:clickable="true"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/upload_image_add"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</RelativeLayout>
