@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by wqk on 16/9/12.
  */
-public class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.UploadImageViewHolder> {
+class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.UploadImageViewHolder> {
 
     private int maxImageSum = 100;
     private UploadImageAdapterListener mListener;
@@ -56,12 +56,12 @@ public class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.
         }
     };
 
-    public UploadImageAdapter(Context context,
-                              List<UploadImageBean> imageList,
-                              UploadImageAdapterListener listener,
-                              int maxImageSum,
-                              int numColumns,
-                              int spacing) {
+    UploadImageAdapter(Context context,
+                       List<UploadImageBean> imageList,
+                       UploadImageAdapterListener listener,
+                       int maxImageSum,
+                       int numColumns,
+                       int spacing) {
         this.context = context;
         this.list = imageList;
         this.mListener = listener;
@@ -124,16 +124,16 @@ public class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.
         }
     }
 
-    public void setList(List<UploadImageBean> imageList) {
+    void setList(List<UploadImageBean> imageList) {
         this.list = imageList;
     }
 
-    public void setMaxImageSum(int maxImageSum) {
+    void setMaxImageSum(int maxImageSum) {
         this.maxImageSum = maxImageSum;
     }
 
 
-    public interface UploadImageAdapterListener {
+    interface UploadImageAdapterListener {
         void addImage();
 
         void delImage(int position);
@@ -142,7 +142,7 @@ public class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.
     }
 
 
-    public class UploadImageViewHolder extends RecyclerView.ViewHolder {
+    class UploadImageViewHolder extends RecyclerView.ViewHolder {
 
         SimpleDraweeView image;
         AppCompatTextView tv_retry;

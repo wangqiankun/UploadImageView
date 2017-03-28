@@ -7,35 +7,7 @@ import android.os.Parcelable;
  * 上传图片用，避免加入与业务相关的成员变量
  * Created by wqk on 16/9/13.
  */
-public class UploadImageBean implements Parcelable {
-
-    public UploadImageBean() {
-
-    }
-
-    public UploadImageBean(String localPath) {
-        this.localPath = localPath;
-    }
-
-    public UploadImageBean(String netUrl, boolean isUploaded, boolean isUploadSucceed) {
-        this.netUrl = netUrl;
-        this.isUploaded = isUploaded;
-        this.isUploadSucceed = isUploadSucceed;
-    }
-
-    public String localPath;
-    public String localName;
-    public boolean isUploaded; //是否已经调用上传接口
-    public boolean isUploadSucceed;
-    public String netUrl;
-
-    protected UploadImageBean(Parcel in) {
-        localPath = in.readString();
-        localName = in.readString();
-        isUploaded = in.readByte() != 0;
-        isUploadSucceed = in.readByte() != 0;
-        netUrl = in.readString();
-    }
+class UploadImageBean implements Parcelable {
 
     public static final Creator<UploadImageBean> CREATOR = new Creator<UploadImageBean>() {
         @Override
@@ -48,6 +20,31 @@ public class UploadImageBean implements Parcelable {
             return new UploadImageBean[size];
         }
     };
+    String localPath;
+    String localName;
+    boolean isUploaded; //是否已经调用上传接口
+    boolean isUploadSucceed;
+    String netUrl;
+    public UploadImageBean() {
+
+    }
+    UploadImageBean(String localPath) {
+        this.localPath = localPath;
+    }
+
+    public UploadImageBean(String netUrl, boolean isUploaded, boolean isUploadSucceed) {
+        this.netUrl = netUrl;
+        this.isUploaded = isUploaded;
+        this.isUploadSucceed = isUploadSucceed;
+    }
+
+    UploadImageBean(Parcel in) {
+        localPath = in.readString();
+        localName = in.readString();
+        isUploaded = in.readByte() != 0;
+        isUploadSucceed = in.readByte() != 0;
+        netUrl = in.readString();
+    }
 
     @Override
     public int describeContents() {

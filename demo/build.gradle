@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.alittletext.uploadimagerecyclerview"
+        applicationId "com.alittletext.demo.uploadimageview"
         minSdkVersion 15
         targetSdkVersion 15
         versionCode 1

@@ -32,8 +32,6 @@ public class UploadImageView extends RecyclerView {
     private int spanCount = SPAN_CODE;          //单行item个数
     private int spacing;                        //item 间距 dp
 
-    //上传图片用
-//    private UpdateImageRecyclerViewHelper mHelper;
     private boolean isUploading; //是否正在上传图片  true-不可进行删除操作
 
     private UploadImageListener mUploadImageListener;
@@ -168,13 +166,12 @@ public class UploadImageView extends RecyclerView {
     }
 
     private void bindAdapter() {
-        mUploadImageAdapter =
-                new UploadImageAdapter(getContext(),
-                        imageList,
-                        new MyUploadImageAdapterListener(),
-                        imageMaxSize,
-                        spanCount,
-                        spacing);
+        mUploadImageAdapter = new UploadImageAdapter(getContext(),
+                imageList,
+                new MyUploadImageAdapterListener(),
+                imageMaxSize,
+                spanCount,
+                spacing);
         setAdapter(mUploadImageAdapter);
     }
 
