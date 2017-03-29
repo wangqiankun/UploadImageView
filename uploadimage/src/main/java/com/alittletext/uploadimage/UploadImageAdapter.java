@@ -1,6 +1,8 @@
 package com.alittletext.uploadimage;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -96,7 +98,10 @@ class UploadImageAdapter extends RecyclerView.Adapter<UploadImageAdapter.UploadI
         UploadImageBean item = list.get(position);
 
         if (!TextUtils.isEmpty(item.localPath)) {
-            holder.image.setImageURI("file:///" + item.localPath);
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inSampleSize = 4;
+            Bitmap bitmap = BitmapFactory.decodeFile(item.localPath, options);
+            holder.image.setImageBitmap(bitmap);
         } else {
             holder.image.setImageURI(item.netUrl);
         }
